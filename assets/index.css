@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+
+
+/* Globals */
+:root{
+    --ff-primary:  "IBM Plex Mono", monospace;
+    --ff-secondary: "Noto Serif', serif;";
+    --c-primary: white;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+h1::selection,span::selection,h2::selection,p::selection{
+    color:red;
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  background-color: black;
+  letter-spacing: 4px;
+  color: var(--c-primary);
+}
+
+section{
+    height: 100vh;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* Links */
+.link:hover{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    transition: letter-spacing 0.5s ease-in-out;
+
+}
+
+
+/* Navbar */
+nav{
+    position: fixed;
+    top: 0;
+    width: 90vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+nav > ul > li > a{
+    background-image: linear-gradient(white, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--ff-secondary);
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    transition: letter-spacing 0.5s ease-in-out;
+}
+
+/* Logo */
+a.logo{
+    font-size: 0.2vw;
+    line-height: 0.2vw;
+    letter-spacing:  0.2vw;
+    text-decoration: none;
+}
+@media only screen and (max-width: 1000px) {
+    a.logo{
+        font-size: 0.8vw;
+        line-height: 0.2vw;
+        letter-spacing:  0.2vw;
+        text-decoration: none;
+    }
+   
+}
+@media only screen and (max-width: 1000px) {
+    nav > ul{
+        display: none;
+        
+    }
+}
+
+.emphasize{
+    font-family: var(--ff-secondary);
+    font-size: 5rem;
+    font-weight: 100;
+}
+@media only screen and (max-width: 1000px) {
+    .emphasize{
+        font-family: var(--ff-secondary);
+        font-size: 15vw;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Introduction */
+.introduction{
+    padding-top: 15vh;
+}
+.introduction > div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30vh;
+    margin-left: 15vw;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+/* .intro-message > .snapping-text{
+    position: fixed;
+    margin-top: -1.7rem;
+    color: red;
+
+    visibility: hidden;
+}
+.intro-message > .snapping-text > span{
+    position: fixed;
+    color: red;
+    visibility: hidden;
+} */
+.intro-message > .snapping-text > span.comma{
+    margin-top: -1rem;
+    
+}
+.introduction > div > h1, .intro-message{
+    color: var(--c-primary);
+    margin-right: 1rem;
+}
+.introduction > div > h1.emphasize{
+    margin: 0;
+}
+/* .introduction > div > h1 > span{
+    position: sticky !important;
+    top: 0;
+    color: red;
+} */
+@media only screen and (max-width: 1000px) {
+    .introduction > div{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+#photo_target{
+    z-index: -1;
+    font-size: 1em;
+    position: absolute;
+    right: 0%;
+    top: 10vh;
+    line-height: 10px;
+}
+
+/* About */
+section#about{
+    padding: 20vh 5vw 0vh 5vw;
+}
+.subhero-message{
+    color: var(--c-primary);
+}
+.subhero-message > ul{
+    list-style: none;
+    
+}
+.subhero-message > ul> li > a{
+    text-decoration: none;
+    background-image: linear-gradient(white, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--ff-secondary);
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1.2rem;
+    
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    transition: letter-spacing 0.5s ease-in-out;
+}
+.quote{
+    display: flex;
+    margin-top: 5vh;
+    justify-content: flex-end;
+}
+
+.quote > p{
+    max-width: 400px;
+    text-align: justify;
+}
+
+/* work */
+section#work{
+    padding: 20vh 5vw 0vh 5vw;
+    color: var(--c-primary);
+    max-height: 500px;
+}
+
+/* Contact */
+section#contact{
+    padding: 20vh 5vw 0vh 5vw;
+    color: var(--c-primary);
+    max-height: 500px;
+}
+section#contact > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+section#contact > div > a{
+    border: dotted;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
